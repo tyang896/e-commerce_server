@@ -40,10 +40,10 @@ router.get('/:id', async (req, res) => {
 router.post('/', (req, res) => {
   /* req.body should look like this...
     {
-      product_name: "Basketball",
-      price: 200.00,
-      stock: 3,
-      tagIds: [1, 2, 3, 4]
+      "product_name": "Basketball",
+      "price": 200.00,
+      "stock": 3,
+      "tagIds": [1, 2, 3, 4]
     }
   */
   Product.create(req.body)//Creates a new row of the product
@@ -74,6 +74,13 @@ router.post('/', (req, res) => {
 // update product
 router.put('/:id', (req, res) => {
   // update product data
+  /*
+  req.body includes:
+  {
+    "tagIds": [3,4]
+  }
+  */
+ //update the product with req.body where the product id matches the id passed from the query parameter
   Product.update(req.body, {
     where: {
       id: req.params.id,
