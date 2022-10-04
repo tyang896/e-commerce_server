@@ -43,6 +43,7 @@ router.post('/', (req, res) => {
       "product_name": "Basketball",
       "price": 200.00,
       "stock": 3,
+			"category_id": 1,
       "tagIds": [1, 2, 3, 4]
     }
   */
@@ -75,7 +76,7 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
   // update product data
   /*
-  req.body includes:
+  req.body must include:
   {
     "tagIds": [3,4]
   }
