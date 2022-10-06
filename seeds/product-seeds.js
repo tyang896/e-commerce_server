@@ -1,3 +1,4 @@
+//Import Product Model
 const { Product } = require('../models');
 
 const productData = [
@@ -33,6 +34,7 @@ const productData = [
   },
 ];
 
+// Create a Product table with productData
 const seedProducts = () => Product.bulkCreate(productData);
 
 module.exports = seedProducts;

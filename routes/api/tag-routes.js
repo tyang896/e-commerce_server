@@ -38,7 +38,7 @@ router.post('/', (req, res) => {
   req.body will look like this...
   {
     "tag_name": "orange",
-    "productIds": [6]
+    "productIds": []
   }
   */
 

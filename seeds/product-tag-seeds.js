@@ -1,3 +1,4 @@
+//Import ProductTag model
 const { ProductTag } = require('../models');
 
 const productTagData = [
@@ -51,6 +52,7 @@ const productTagData = [
   },
 ];
 
+// Create a ProductTag table with productTagData
 const seedProductTags = () => ProductTag.bulkCreate(productTagData);
 
 module.exports = seedProductTags;

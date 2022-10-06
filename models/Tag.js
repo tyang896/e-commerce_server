@@ -1,12 +1,14 @@
+//imports
 const { Model, DataTypes } = require('sequelize');
-
 const sequelize = require('../config/connection.js');
 
+//Initialize Tag Model
 class Tag extends Model {}
 
+//Set rules and fiels for Tag Model
 Tag.init(
   {
-    // define columns
+    // Tag Model contains the following columns: id, tag_name
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
